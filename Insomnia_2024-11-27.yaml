@@ -1,0 +1,124 @@
+_type: export
+__export_format: 4
+__export_date: 2024-11-27T18:24:52.175Z
+__export_source: insomnia.desktop.app:v10.1.1
+resources:
+  - _id: req_7da2a6f0c6f14be59f46b59a7e188ecc
+    parentId: wrk_18990921a41e450c826bc8af96c3e236
+    modified: 1732731752872
+    created: 1732731648924
+    url: http://localhost:3000/auth/refresh
+    name: Refresh
+    description: ""
+    method: POST
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/10.1.1
+    authentication: {}
+    metaSortKey: -1732731648924
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_18990921a41e450c826bc8af96c3e236
+    parentId: null
+    modified: 1732730730395
+    created: 1732730730395
+    name: auth-app-nodejs
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_d1859af0f25e493db8dfa707fc7a7407
+    parentId: wrk_18990921a41e450c826bc8af96c3e236
+    modified: 1732731764394
+    created: 1732731551896
+    url: http://localhost:3000/auth/check-auth
+    name: Check Auth
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/10.1.1
+    authentication:
+      type: bearer
+      token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImlhdCI6MTczMjczMTc1NSwiZXhwIjoxNzMyNzMxODE1fQ.kQpjN5_Rq8qgvjdO0iINndga3GlcnesZvpI3xBSTEOY
+      disabled: false
+    metaSortKey: -1732731551896
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_6477bef0fa584f6b992d313d281084ed
+    parentId: wrk_18990921a41e450c826bc8af96c3e236
+    modified: 1732731549086
+    created: 1732730735620
+    url: http://localhost:3000/auth/login
+    name: Login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username": "user1",
+        	"password": "password1"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.1.1
+    authentication: {}
+    metaSortKey: -1732730735620
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_eab865ae9f501f6b1a78d65b364665c3450469e8
+    parentId: wrk_18990921a41e450c826bc8af96c3e236
+    modified: 1732730730396
+    created: 1732730730396
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1732730730396
+    _type: environment
+  - _id: jar_eab865ae9f501f6b1a78d65b364665c3450469e8
+    parentId: wrk_18990921a41e450c826bc8af96c3e236
+    modified: 1732731851134
+    created: 1732730730397
+    name: Default Jar
+    cookies:
+      - key: refreshToken
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJ1c2VyMSIsImlhdCI6MTczMjczMTg1MSwiZXhwIjoxNzMyNzMyMTUxfQ.B447AUG9yCT42qaQXLeVhpeg-RLdrgGdf-tDDbX0vWg
+        domain: localhost
+        path: /
+        secure: true
+        httpOnly: true
+        hostOnly: true
+        creation: 2024-11-27T18:18:52.855Z
+        lastAccessed: 2024-11-27T18:24:11.134Z
+        id: cb062970-cacc-4542-bc67-309edaf682a1
+    _type: cookie_jar
